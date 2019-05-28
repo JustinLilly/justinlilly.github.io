@@ -5,21 +5,68 @@
   <title>Franklin, ID | Weather Site</title>
   <meta name="description" content="Weather forecast for Franklin, Idaho">
   <meta name="viewport" content="width=device-width">
-  <link href="screen.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="/css/screen.css" rel="stylesheet" type="text/css" media="screen">
  </head>
  <body>
      <header>
         <h1>Franklin, ID</h1>
         <nav>
          <ul>
-            <li><a href="#" title="Go to the Weather Site home page">Current</a></li>
+            <li><a href="../index.html" title="Go to the Weather Site home page">Home</a></li>
          </ul>
         </nav>
      </header>
-     <main>
-        
+     <main id="main">
+        <section id="locationInfo">
+           <h1 id="locationh1">Franklin, Id</h1>
+           <dl>
+              <dt>Zip:</dt>
+              <dd id="zip">83237</dd>
+              <dt>Elevation:</dt>
+              <dd id="elevation">1514.246</dd>
+           </dl>
+        </section>
+        <div id="currentWeather">
+           <section id="temps">
+              <h2>Temperature</h2>
+              <p>40&#8457;</p>
+              <p>
+                 <span>64&#8457;</span>
+                 <span>41&#8457;</span>
+              </p>
+
+           </section>
+           <section id="wind">
+              <h2>Wind</h2>
+              <p class="northMark">N</p>
+              <div id="dial"></div>
+              <p>Direction: SW</p>
+              <p>Gusts: 10-12mph</p>
+           </section>
+           <section id="summary">
+
+           </section>
+           <section id="hourly">
+               <h2>Hourly Forecast</h2>
+               <ul id="hourlyData">
+                  <li>10am: 41&#8457;</li>
+                  <li>11am: 41&#8457;</li>
+                  <li>12pm: 41&#8457;</li>
+                  <li>1pm: 41&#8457;</li>
+                  <li>2pm: 41&#8457;</li>
+                  <li>3pm: 41&#8457;</li>
+                  <li>4pm: 42&#8457;</li>
+                  <li>5pm: 44&#8457;</li>
+                  <li>6pm: 44&#8457;</li>
+                  <li>7pm: 46&#8457;</li>
+                  <li>9pm: 49&#8457;</li>
+                  <li>10pm: 51&#8457;</li>
+                  <li>11pm: 55&#8457;</li>
+               </ul>
+           </section>
+        </div>
      </main>
-     <footer>
+     <footer id="page-footer">
         &copy;2019, The Weather Site
      </footer>
  </body>
