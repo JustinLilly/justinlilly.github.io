@@ -23,17 +23,83 @@ body {
     font-family: Helvetica, sans-serif;
 }
 
-#page-header {
-    background-color: #0e89d5;
-    display: flex;
-    align-items: center;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sansita', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {}
+nav {
+    background-color: #0e89d5;
+}
+nav ul{
+    color: white;
+    list-style-type: none;
+}
+nav li {
+    display: inline-block;
+    padding: 15px;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+main section {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(211, 211, 211, 0.5);
+    text-align: center;
+    margin: 2px 0 2px 0;
+}
+
+#page-header {
+    display: flex;
+    background-color: #0e89d5;
+    align-items: center;
+    height: 60px;
+}
+
+#locationInfo {
+    background: #fff;
+    border: none;
+    height: 200px;
+}
+
+#tempHigh { color: red; }
+#tempLow { color: blue; }
+
+#hourly {
+    width: 100%;
+    height: 150px;
+}
+#hourlyData {
+    overflow: scroll;
+    list-style-type: none;
+    
+}
+#hourlyData li {
+    float: left;
+}
 
 /**************************
 *  3. Mobile Rules 
 ***************************/
+@media only screen and (min-width: 490px) {
+
+    #page-header img {
+        height: 50px;
+        width: 50px;
+        padding: 2px;
+    }
+    #locationInfo span {
+        font-weight: bold;
+    }
+    #locationInfo p {
+        font-size: 14px;
+        text-align: left;
+        margin-left: 5px;
+    }
+
+}
 
 /**************************
 * 4. Large Screen Rules 
