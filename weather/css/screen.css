@@ -62,8 +62,11 @@ main section {
     background: #fff;
     border: none;
     height: 200px;
+    text-align: left;
 }
 
+
+#tempCurrent { font-size: 5em; margin: 0; padding: 0; }
 #tempHigh { color: red; }
 #tempLow { color: blue; }
 
@@ -72,18 +75,16 @@ main section {
     height: 150px;
 }
 #hourlyData {
-    overflow: scroll;
+    overflow: auto;
     list-style-type: none;
-    
+    white-space: nowrap;
 }
-#hourlyData li {
-    float: left;
-}
+
 
 /**************************
 *  3. Mobile Rules 
 ***************************/
-@media only screen and (min-width: 490px) {
+@media only screen and (max-width: 490px) {
 
     #page-header img {
         height: 50px;
@@ -99,9 +100,20 @@ main section {
         margin-left: 5px;
     }
 
+    #primaryContent {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /**************************
 * 4. Large Screen Rules 
 ***************************/
 
+#primaryContent {
+    display: flex;
+    flex-direction: row;
+}
+@media only screen and (min-width: 490px) {
+
+}

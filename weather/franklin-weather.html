@@ -17,51 +17,54 @@
      <main id="main">
         <section id="locationInfo">
            <h1 id="locationh1">Franklin, Id</h1>
-           <p><span>Zip: </span>83237 | <span>Elevation: </span>1514.246 | <span>Location: </span>42.07 N, 111.79 W |</p>
+           <p><span>Zip: </span>83237 | <span>Elevation: </span>1514.246 | <span>Location: </span>42.07 N, 111.79 W</p>
         </section>
-        <div id="primaryContent">
+        
         <div id="currentWeather">
            <section id="temps">
               <h2>Temperature</h2>
-              <p>40&#8457;</p>
+              <p id="tempCurrent">40&#8457;</p>
               <p>
                  <span id="tempHigh">64&#8457;</span>
                  <span id="tempLow">41&#8457;</span>
               </p>
-
+              <p>Feels Like: 0&#8457;</p>
            </section>
            <section id="wind">
               <h2>Wind</h2>
-              <p class="northMark">N</p>
-              <div id="dial"></div>
+              <div id="dial">
+                 <p>5 mph</p>
+                 <img src="images/wind-pointer.png" alt="wind dial">
+              </div>
               <p>Direction: SW</p>
               <p>Gusts: 10-12mph</p>
            </section>
            
            <section id="summary">
-               <h2>Clear</h2>
+               <h2>Rain</h2>
+               <img src="images/raindrops.jpg" alt="raindrops">
            </section>
            
          </div>
            <section id="hourly">
                <h2>Hourly Forecast</h2>
                <ul id="hourlyData">
-                  <li>10am: 41&#8457; | </li>
-                  <li>11am: 41&#8457; | </li>
-                  <li>12pm: 41&#8457; | </li>
-                  <li>1pm: 41&#8457; | </li>
-                  <li>2pm: 41&#8457; | </li>
-                  <li>3pm: 41&#8457; | </li>
-                  <li>4pm: 42&#8457; | </li>
-                  <li>5pm: 44&#8457; | </li>
-                  <li>6pm: 44&#8457; | </li>
-                  <li>7pm: 46&#8457; | </li>
-                  <li>9pm: 49&#8457; | </li>
-                  <li>10pm: 51&#8457; | </li>
-                  <li>11pm: 55&#8457; | </li>
+                  <li>10am: </li><li>41&#8457; | </li>
+                  <li>11am: </li><li>41&#8457; | </li>
+                  <li>12pm: </li><li>41&#8457; | </li>
+                  <li>1pm: </li><li>41&#8457; | </li>
+                  <li>2pm:</li><li>41&#8457; | </li>
+                  <li>3pm: </li><li>41&#8457; | </li>
+                  <li>4pm: </li><li>42&#8457; | </li>
+                  <li>5pm: </li><li>44&#8457; | </li>
+                  <li>6pm: </li><li>44&#8457; | </li>
+                  <li>7pm: </li><li>46&#8457; | </li>
+                  <li>8pm: </li><li>49&#8457; | </li>
+                  <li>9pm: </li><li>51&#8457; | </li>
+                  <li>10pm: </li><li>55&#8457; | </li>
                </ul>
            </section>
-        </div>
+        
      </main>
      <footer id="page-footer">
         &copy;2019 - The Weather Site
