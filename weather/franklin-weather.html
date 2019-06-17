@@ -23,19 +23,16 @@
         <div id="currentWeather">
            <section id="temps">
               <h2>Temperature</h2>
-              <p id="tempCurrent">40&#8457;</p>
+              <p id="tempCurrent">40°F</p>
               <p>
-                 <span id="tempHigh">64&#8457;</span>
-                 <span id="tempLow">41&#8457;</span>
+                 <span id="tempHigh">64°F</span>
+                 <span id="tempLow">41°F</span>
               </p>
-              <p>Feels Like: 0&#8457;</p>
+              <p id="feels">Feels Like <span id="feelTemp">??</span>°F</p>
            </section>
            <section id="wind">
               <h2>Wind</h2>
-              <div id="dial">
-                 <p>5 mph</p>
-                 <img src="images/wind-pointer.png" alt="wind dial">
-              </div>
+              <div id="dial" class="w"></div>
               <p>Direction: SW</p>
               <p>Gusts: 10-12mph</p>
            </section>
@@ -49,19 +46,19 @@
            <section id="hourly">
                <h2>Hourly Forecast</h2>
                <ul id="hourlyData">
-                  <li>10am: </li><li>41&#8457; | </li>
-                  <li>11am: </li><li>41&#8457; | </li>
-                  <li>12pm: </li><li>41&#8457; | </li>
-                  <li>1pm: </li><li>41&#8457; | </li>
-                  <li>2pm:</li><li>41&#8457; | </li>
-                  <li>3pm: </li><li>41&#8457; | </li>
-                  <li>4pm: </li><li>42&#8457; | </li>
-                  <li>5pm: </li><li>44&#8457; | </li>
-                  <li>6pm: </li><li>44&#8457; | </li>
-                  <li>7pm: </li><li>46&#8457; | </li>
-                  <li>8pm: </li><li>49&#8457; | </li>
-                  <li>9pm: </li><li>51&#8457; | </li>
-                  <li>10pm: </li><li>55&#8457; | </li>
+                  <li>10am: </li><li>41°F | </li>
+                  <li>11am: </li><li>41°F | </li>
+                  <li>12pm: </li><li>41°F | </li>
+                  <li>1pm: </li><li>41°F | </li>
+                  <li>2pm:</li><li>41°F | </li>
+                  <li>3pm: </li><li>41°F | </li>
+                  <li>4pm: </li><li>42°F | </li>
+                  <li>5pm: </li><li>44°F | </li>
+                  <li>6pm: </li><li>44°F | </li>
+                  <li>7pm: </li><li>46°F | </li>
+                  <li>8pm: </li><li>49°F | </li>
+                  <li>9pm: </li><li>51°F | </li>
+                  <li>10pm: </li><li>55°F | </li>
                </ul>
            </section>
         
@@ -77,5 +74,6 @@
             <li><a href="#" title=""></a>Greenville</li>
          </ul>
       </nav>
+      <script src="js/functions.js"></script>
  </body>
 </html>
