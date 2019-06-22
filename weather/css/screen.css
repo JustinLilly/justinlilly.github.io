@@ -34,10 +34,10 @@ nav {
 nav ul{
     color: white;
     list-style-type: none;
-    margin: 0px;
+    margin: 10px 0 0 0;
     display: flex;
     justify-content: space-evenly;
-    font-size: 30px;
+    font-size: 20px;
     padding-inline-start: 0px; 
 }
 nav li {
@@ -64,11 +64,10 @@ main section {
     display: flex;
     background-color: #0e89d5;
     align-items: center;
-    height: 134px;
 }
 #page-header h1 {
     font-family: Helvetica, sans-serif;
-    font-size: 48px;
+    
     padding: 10px 20px 10px 20px;
 }
 
@@ -76,7 +75,7 @@ main section {
 #locationInfo {
     background: #fff;
     border: none;
-    height: 120px;
+    height: auto;
     text-align: left;
     font-size: 32px;
 }
@@ -91,6 +90,8 @@ main section {
 #page-footer {
     background-color: #0e89d5;
 }
+
+/* Current Weather */
 #currentWeather {
     display: flex;
     flex-direction: column;
@@ -98,6 +99,11 @@ main section {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../images/rain.jpg");
+}
+
+#summary img {
+    width: 80%;
+    height: auto;
 }
 
 #tempCurrent { font-size: 5em; margin: 0; padding: 0; }
@@ -131,15 +137,10 @@ main section {
     list-style-type: none;
     white-space: nowrap;
 }
-dl {
-    /* margin-top: -15px;
-    margin-bottom: 0.3em; */
-}
 dt, dd {
     display: inline;
     padding: 0;
     margin: 0;
-    /* font-size: 2.5vw; */
 }
 dt::before{
     content: " | ";
@@ -169,12 +170,15 @@ dt:first-child::before {
 /**************************
 *  3. Mobile Rules 
 ***************************/
-@media only screen and (max-width: 490px) {
+@media only screen and (max-width: 823px) {
 
     #page-header img {
         height: 50px;
         width: 50px;
         padding: 2px;
+    }
+    #page-header h1 {
+        margin: 0px;
     }
     #locationInfo p {
         font-size: 14px;
@@ -204,7 +208,7 @@ dt:first-child::before {
 /**************************
 * 4. Large Screen Rules 
 ***************************/
-@media only screen and (min-width: 796px) {
+@media only screen and (min-width: 823px) {
     
     #mobileNav { display: none; }
     #currentWeather {
@@ -216,8 +220,14 @@ dt:first-child::before {
         width: 33%;
         padding: 50px 0 50px 0;
     }
-    #summary img {
-        width: 80%;
-        height: auto;
+    #page-header {
+        height: 134px;
+    }
+    #page-header h1 {
+        font-size: 48px;
+    }
+    nav ul{
+        font-size: 32px;
+        margin: 0px;
     }
 }
