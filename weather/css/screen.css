@@ -3,7 +3,6 @@
 2. General Rules
 3. Mobile Rules
 4. Large Screen Rules
-
 */
 
 /**************************
@@ -25,18 +24,25 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Sansita', sans-serif;
+    font-size: 36px;
 }
 
+/* Navigation */
 nav {
     background-color: #0e89d5;
 }
 nav ul{
     color: white;
     list-style-type: none;
+    margin: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px;
+    padding-inline-start: 0px; 
 }
 nav li {
     display: inline-block;
-    padding: 15px;
+    padding: 25px 0px 25px 0px;
 }
 nav a {
     text-decoration: none;
@@ -49,27 +55,56 @@ main section {
     background-color: rgb(211, 211, 211, 0.5);
     text-align: center;
     margin: 2px 0 2px 0;
+    height: auto;
+    width: 100%;
 }
 
+/* Page Header */
 #page-header {
     display: flex;
     background-color: #0e89d5;
     align-items: center;
-    height: 60px;
+    height: 134px;
+}
+#page-header h1 {
+    font-family: Helvetica, sans-serif;
+    font-size: 48px;
+    padding: 10px 20px 10px 20px;
 }
 
+/* Location Info */
 #locationInfo {
     background: #fff;
     border: none;
-    height: 200px;
+    height: 120px;
     text-align: left;
+    font-size: 32px;
 }
-
+#locationInfo h1 { 
+    font-size: 48px; 
+    margin: 10px 0 0 0;
+}
+#locationInfo p { margin-top: 10px; }
+#locationInfo span {
+    font-weight: bold;
+}
+#page-footer {
+    background-color: #0e89d5;
+}
+#currentWeather {
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/rain.jpg");
+}
 
 #tempCurrent { font-size: 5em; margin: 0; padding: 0; }
 #tempHigh { color: red; }
 #tempLow { color: blue; }
 
+/* Wind Dial */
 #dial {
     height: 150px;
     width: 150px;
@@ -77,16 +112,16 @@ main section {
     z-index: 100;
     margin: -.6em auto 0;
 }
-
-.n {    transform: rotate(360deg);    }
-.ne {    transform: rotate(45deg);    }
-.e {    transform: rotate(90deg);    }
+.n  {    transform: rotate(360deg);    }
+.ne {    transform: rotate(45deg);     }
+.e  {    transform: rotate(90deg);     }
 .se {    transform: rotate(135deg);    }
-.s {    transform: rotate(180deg);    }
+.s  {    transform: rotate(180deg);    }
 .sw {    transform: rotate(225deg);    }
-.w {    transform: rotate(270deg);    }
+.w  {    transform: rotate(270deg);    }
 .nw {    transform: rotate(315deg);    }
 
+/* Hourly Data */
 #hourly {
     width: 100%;
     height: 150px;
@@ -96,7 +131,40 @@ main section {
     list-style-type: none;
     white-space: nowrap;
 }
+dl {
+    /* margin-top: -15px;
+    margin-bottom: 0.3em; */
+}
+dt, dd {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    /* font-size: 2.5vw; */
+}
+dt::before{
+    content: " | ";
+}
+dt:first-child::before {
+    content: "";
+  }
 
+/* Background pictures for Summary */
+/* Should be small pictures first*/
+.clear {
+    background-image: url("/weather/images/clear.jpg");
+}
+.fog {
+    background-image: url("/weather/images/fog.jpg");
+}
+.rain {
+    background-image: url("/weather/images/rain.jpg");
+}
+.cloudy {
+    background-image: url("/weather/images/clouds.jpg");
+}
+.snow {
+    background-image: url("/weather/images/snow.jpg");
+}
 
 /**************************
 *  3. Mobile Rules 
@@ -108,29 +176,48 @@ main section {
         width: 50px;
         padding: 2px;
     }
-    #locationInfo span {
-        font-weight: bold;
-    }
     #locationInfo p {
         font-size: 14px;
         text-align: left;
         margin-left: 5px;
     }
+    #largeScreenNav { display: none; }
 
-    #primaryContent {
-        display: flex;
-        flex-direction: column;
+    /* Background pictures for Summary - Large */
+    /* .clear {
+        background-image: url("/weather/images/clear.jpg");
     }
+    .fog {
+        background-image: url("/weather/images/fog.jpg");
+    }
+    .rain {
+        background-image: url("/weather/images/rain.jpg");
+    }
+    .cloudy {
+        background-image: url("/weather/images/clouds.jpg");
+    }
+    .snow {
+        background-image: url("/weather/images/snow.jpg");
+    } */
 }
 
 /**************************
 * 4. Large Screen Rules 
 ***************************/
-
-#primaryContent {
-    display: flex;
-    flex-direction: row;
-}
-@media only screen and (min-width: 490px) {
-
+@media only screen and (min-width: 796px) {
+    
+    #mobileNav { display: none; }
+    #currentWeather {
+        display: flex;
+        flex-direction: row;
+        padding: 20px 0 20px 0;
+    }
+    #currentWeather section {
+        width: 33%;
+        padding: 50px 0 50px 0;
+    }
+    #summary img {
+        width: 80%;
+        height: auto;
+    }
 }

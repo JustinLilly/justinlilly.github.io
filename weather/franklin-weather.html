@@ -13,60 +13,80 @@
             <img src="images/logo.jpeg" alt="Umbrella logo">
             <h1>The Weather Site</h1>
          </section>
+         <nav id="largeScreenNav">
+               <ul>
+                  <li><a href="../index.html" title="Go to the Weather Site home page">Current</a></li>
+                  <li><a href="#" title=""></a>Search</li>
+                  <li><a href="#" title=""></a>Franklin</li>
+                  <li><a href="#" title=""></a>Greenville</li>
+               </ul>
+         </nav>
      </header>
      <main id="main">
         <section id="locationInfo">
-           <h1 id="locationh1">Franklin, Id</h1>
+           <h1 id="locationh1">Franklin, Idaho</h1>
            <p><span>Zip: </span>83237 | <span>Elevation: </span>1514.246 | <span>Location: </span>42.07 N, 111.79 W</p>
         </section>
-        
-        <div id="currentWeather">
-           <section id="temps">
-              <h2>Temperature</h2>
-              <p id="tempCurrent">40°F</p>
-              <p>
-                 <span id="tempHigh">64°F</span>
-                 <span id="tempLow">41°F</span>
-              </p>
-              <p id="feels">Feels Like <span id="feelTemp">??</span>°F</p>
-           </section>
-           <section id="wind">
-              <h2>Wind</h2>
-              <div id="dial" class="w"></div>
-              <p>Direction: SW</p>
-              <p>Gusts: 10-12mph</p>
-           </section>
-           
-           <section id="summary">
-               <h2>Rain</h2>
-               <img src="images/raindrops.jpg" alt="raindrops">
-           </section>
-           
-         </div>
+            <div id="currentWeather">
+               <section id="temps">
+                  <h2>Temperature</h2>
+                  <p id="tempCurrent">40°F</p>
+                  <p>
+                     <span id="tempHigh">64°F</span>
+                     <span id="tempLow">41°F</span>
+                  </p>
+                  <p id="feels">Feels Like <span id="feelTemp">??</span>°F</p>
+               </section>
+               <section id="wind">
+                  <h2>Wind</h2>
+                  <div id="dial" class="w"></div>
+                  <p>Direction: SW</p>
+                  <p>Gusts: 10-12mph</p>
+               </section>
+               
+               <section id="summary">
+                     <h2>Rain</h2>
+                     <img src="images/raindrops.jpg" alt="raindrops">
+                     <div id="weatherView" class="rain"></div>
+               </section>
+               </div>
            <section id="hourly">
                <h2>Hourly Forecast</h2>
-               <ul id="hourlyData">
-                  <li>10am: </li><li>41°F | </li>
-                  <li>11am: </li><li>41°F | </li>
-                  <li>12pm: </li><li>41°F | </li>
-                  <li>1pm: </li><li>41°F | </li>
-                  <li>2pm:</li><li>41°F | </li>
-                  <li>3pm: </li><li>41°F | </li>
-                  <li>4pm: </li><li>42°F | </li>
-                  <li>5pm: </li><li>44°F | </li>
-                  <li>6pm: </li><li>44°F | </li>
-                  <li>7pm: </li><li>46°F | </li>
-                  <li>8pm: </li><li>49°F | </li>
-                  <li>9pm: </li><li>51°F | </li>
-                  <li>10pm: </li><li>55°F | </li>
-               </ul>
+               <dl id="hourlyData">
+                <dt>10am: </dt>
+                <dd>41°F</dd>
+                <dt>11am: </dt>
+                <dd>41°F </dd>
+                <dt>12pm: </dt>
+                <dd>41°F </dd>
+                <dt>1pm: </dt>
+                <dd>41°F </dd>
+                <dt>2pm: </dt>
+                <dd>41°F </dd>
+                <dt>3pm: </dt>
+                <dd>41°F </dd>
+                <dt>4pm: </dt>
+                <dd>42°F </dd>
+                <dt>5pm: </dt>
+                <dd>44°F </dd>
+                <dt>6pm: </dt>
+                <dd>44°F </dd>
+                <dt>7pm: </dt>
+                <dd>46°F </dd>
+                <dt>8pm: </dt>
+                <dd>49°F </dd>
+                <dt>9pm: </dt>
+                <dd>51°F </dd>
+                <dt>10pm: </dt>
+                <dd>55°F</dd>
+            </dl>
            </section>
         
      </main>
      <footer id="page-footer">
         &copy;2019 - The Weather Site
      </footer>
-     <nav>
+     <nav id="mobileNav">
          <ul>
             <li><a href="../index.html" title="Go to the Weather Site home page">Home</a></li>
             <li><a href="#" title=""></a>Search</li>
