@@ -6,11 +6,19 @@ console.log('My javascript is being read.');
 // Variables for Function Use
 let temp = 31;
 let speed = 5;
-let direction = "SSW"; //Set your own value
-let weatherDesc = "Rainy";
-let weatherCondition = "";
+let direction = "SSW"; // Set your own value
+let weatherDesc = document.getElementById("weatherView");
+let weatherCondition = getCondition(weatherDesc);
+let meters = 1514.246;
+let feet = 0;
+let elevation = document.getElementById("elevation");
+ 
+// Get the next hour based on the current time
+let date = new Date(); 
+let nextHour = date.getHours() + 1;
+let hourlyTemps = [];
 
-
+// Function Calls
 buildWC(speed, temp);
 windDial(direction);
 getCondition(weatherDesc);
@@ -20,6 +28,7 @@ function buildWC(speed, temp) {
     let feelTemp = document.getElementById("feelTemp");
     
     // Compute the windchill
+    console.log('Wind Chill Computations:');
     let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
     console.log(wc);    
 
@@ -80,56 +89,58 @@ function windDial(direction){
    }
 }
 
-
 // Get Condition function
 function getCondition(weatherDesc) {
     // Determine weather condition
-    if(weatherDesc == "whatever") {
-        weatherCondition = "Clear";
+    switch(weatherDesc) {
+        case "Clear":
+        weatherDesc = "clear"; break;
+        case "Fog":
+        case "foggy":
+        case "Foggy":
+        weatherDesc = "fog"; break;
+        case "Rain":
+        case "rainy":
+        case "Rainy":
+        case "Thunderstorms":
+        case "thunderstorms":
+        weatherDesc = "rain"; break;
+        case "cloudy":
+        case "Cloudy":
+        case "Cloud":
+        weatherDesc = "cloud"; break;
+        case "Snow":
+        case "snowy":
+        case "Snowy":
+        weatherDesc = "snow"; break;
     }
-    if(weatherDesc == "whatever") {
-        weatherCondition = "Cloud";
-    }
-    if(weatherDesc == "whatever") {
-        weatherCondition = "Fog";
-    }
-    if(weatherDesc == "whatever") {
-        weatherCondition = "Rain";
-    }
-    if(weatherDesc == "whatever") {
-        weatherCondition = "Snow";
-    }
-    return weatherCondition;
+    console.log('Weather Desc: ' + weatherDesc);
+    return weatherDesc;
 }
 function changeSummaryImage(weatherCondition) {
     // Change summary image
     switch (weatherCondition) {
         case "clear":
-        case "Clear":
         weatherView.setAttribute("class", "clear"); break;
         case "fog":
-        case "Fog":
-        case "foggy":
-        case "Foggy":
         weatherView.setAttribute("class", "fog"); break;
         case "rain":
-        case "Rain":
-        case "rainy":
-        case "Rainy":
         weatherView.setAttribute("class", "rain"); break;
-        case "cloudy":
-        case "Cloudy":
         case "cloud":
-        case "Cloud":
         weatherView.setAttribute("class", "cloudy"); break;
         case "snow":
-        case "Snow":
-        case "snowy":
-        case "Snowy":
         weatherView.setAttribute("class", "snow"); break;
     }
 }
 
+// Convert meters to feet function
+function convertMeters(meters) {
+    feet = Math.floor(meters * 3.28084);
+    elevation.innerHTML = feet;
+    return feet;
+}
+
+// Two New Functions
 // Convert, Format time to 12 hour format
 function format_time(hour) {
     if(hour > 23){ 
@@ -146,7 +157,7 @@ function format_time(hour) {
    }
 
    // Build the hourly temperature list
-function buildHourlyData(nextHour,hourlyTemps) {
+function buildHourlyData(nextHour, hourlyTemps) {
     // Data comes from a JavaScript object of hourly temp name - value pairs
     // Next hour should have a value between 0-23
     // The hourlyTemps variable holds an array of temperatures
@@ -161,6 +172,4 @@ function buildHourlyData(nextHour,hourlyTemps) {
      return hourlyListItems;
     }
 
-    // Get the next hour based on the current time
-    let date = new Date(); 
-    let nextHour = date.getHours() + 1;
+   

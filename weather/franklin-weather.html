@@ -24,8 +24,12 @@
      </header>
      <main id="main-content">
         <section id="locationInfo">
-           <h1 id="locationh1">Franklin, Idaho</h1>
-           <p><span>Zip: </span>83237 | <span>Elevation: </span>1514.246 | <span>Location: </span>42.07 N, 111.79 W</p>
+           <h1 id="contentHeading">Franklin, Idaho</h1>
+           <dl>
+              <dt>Zip: </dt><dd id="zip">83237 | </dd>
+              <dt>Elevation: </dt><dd id="elevation">4968 ft. | </dd>
+              <dt>Location: </dt><dd id="location"><span id="longitude">42.07 N,</span><span id="latitude"> 111.79 W</span></dd>
+           </dl>
         </section>
             <div id="currentWeather">
                <section id="temps">
@@ -39,14 +43,16 @@
                </section>
                <section id="wind">
                   <h2>Wind</h2>
-                  <div id="dial" class="w"></div>
-                  <p>Direction: SW</p>
-                  <p>Gusts: 10-12mph</p>
+                     <div id="dial" class="w"></div>
+                     <span id="windSpeed">5 mph</span>
+                  <dl>
+                     <dt>Direction: </dt><dd id="windDirection">SW</dd><br>
+                     <dt>Gusts: </dt><dd id="gusts">10-12mph</dd>
+                  </dl>
                </section>
                
                <section id="summary">
                      <h2>Rain</h2>
-                     <img src="images/raindrops.jpg" alt="raindrops">
                      <div id="weatherView" class="rain"></div>
                </section>
                </div>

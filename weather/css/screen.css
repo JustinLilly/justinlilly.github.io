@@ -49,7 +49,7 @@ nav a {
     color: white;
 }
 
-main-content section {
+main section {
     border: 1px solid black;
     border-radius: 10px;
     background-color: rgb(211, 211, 211, 0.5);
@@ -84,9 +84,7 @@ main-content section {
     margin: 10px 0 0 0;
 }
 #locationInfo p { margin-top: 10px; }
-#locationInfo span {
-    font-weight: bold;
-}
+
 #page-footer {
     background-color: #0e89d5;
 }
@@ -101,9 +99,12 @@ main-content section {
     background-image: url("../images/rain.jpg");
 }
 
-#summary img {
-    width: 80%;
-    height: auto;
+#summary div {
+    
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 #tempCurrent { font-size: 5em; margin: 0; padding: 0; }
@@ -127,6 +128,11 @@ main-content section {
 .w  {    transform: rotate(270deg);    }
 .nw {    transform: rotate(315deg);    }
 
+#windSpeed {
+    position: relative;
+    top: -85px;
+}
+
 /* Hourly Data */
 #hourly {
     width: 100%;
@@ -137,15 +143,18 @@ main-content section {
     list-style-type: none;
     white-space: nowrap;
 }
-dt, dd {
+dt, dd, #hourlyData ul, #hourlyData li  {
     display: inline;
     padding: 0;
     margin: 0;
 }
-dt::before{
+dt {
+    font-weight: bold;
+}
+#hourlyData li::before{
     content: " | ";
 }
-dt:first-child::before {
+#hourlyData :first-child::before {
     content: "";
   }
 
@@ -158,7 +167,7 @@ dt:first-child::before {
     background-image: url("/weather/images/fog.jpg");
 }
 .rain {
-    background-image: url("/weather/images/rain.jpg");
+    background-image: url("../images/rain.jpg");
 }
 .cloudy {
     background-image: url("/weather/images/clouds.jpg");

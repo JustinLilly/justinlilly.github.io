@@ -27,13 +27,12 @@
 
      <main id="main-content" class="hide">
         <section id="locationInfo">
-           <h1 id="locationh1">Greenville, SC</h1>
+           <h1 id="contentHeading"></h1>
            <dl>
               <dt>Zip: </dt><dd id="zip"></dd>
               <dt>Elevation: </dt><dd id="elevation"></dd>
               <dt>Location: </dt><dd id="location"><span id="longitude"></span><span id="latitude"></span></dd>
            </dl>
-           <!-- <p><span>Zip: </span>83237 | <span>Elevation: </span>1514.246 | <span>Location: </span>42.07 N, 111.79 W</p> -->
         </section>
             <div id="currentWeather">
                <section id="temps">
@@ -47,47 +46,22 @@
                </section>
                <section id="wind">
                   <h2>Wind</h2>
-                  <div id="dial" class="w"></div>
-                  <p>Direction: SW</p>
-                  <p>Gusts: 10-12mph</p>
+                     <div id="dial"></div>
+                     <span id="windSpeed"></span>
+                  <dl>
+                     <dt>Direction: </dt><dd id="windDirection"></dd><br>
+                     <dt>Gusts: </dt><dd id="gusts"></dd>
+                  </dl>
                </section>
                
                <section id="summary">
-                     <h2>Rain</h2>
-                     <img src="images/raindrops.jpg" alt="raindrops">
+                     <h2 id="summaryCondition">Rain</h2>
                      <div id="weatherView" class="rain"></div>
                </section>
                </div>
            <section id="hourly">
                <h2>Hourly Forecast</h2>
-               <dl id="hourlyData">
-                <dt>10am: </dt>
-                <dd>41°F</dd>
-                <dt>11am: </dt>
-                <dd>41°F </dd>
-                <dt>12pm: </dt>
-                <dd>41°F </dd>
-                <dt>1pm: </dt>
-                <dd>41°F </dd>
-                <dt>2pm: </dt>
-                <dd>41°F </dd>
-                <dt>3pm: </dt>
-                <dd>41°F </dd>
-                <dt>4pm: </dt>
-                <dd>42°F </dd>
-                <dt>5pm: </dt>
-                <dd>44°F </dd>
-                <dt>6pm: </dt>
-                <dd>44°F </dd>
-                <dt>7pm: </dt>
-                <dd>46°F </dd>
-                <dt>8pm: </dt>
-                <dd>49°F </dd>
-                <dt>9pm: </dt>
-                <dd>51°F </dd>
-                <dt>10pm: </dt>
-                <dd>55°F</dd>
-            </dl>
+               <ul id="hourlyData"></ul>
            </section>
         
      </main>
