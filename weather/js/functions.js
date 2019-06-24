@@ -108,6 +108,7 @@ function getCondition(weatherDesc) {
         case "cloudy":
         case "Cloudy":
         case "Cloud":
+        case "Partly Cloudy":
         weatherDesc = "cloud"; break;
         case "Snow":
         case "snowy":
