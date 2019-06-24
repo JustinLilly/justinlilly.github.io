@@ -49,7 +49,7 @@ nav a {
     color: white;
 }
 
-main section {
+main-content section {
     border: 1px solid black;
     border-radius: 10px;
     background-color: rgb(211, 211, 211, 0.5);
@@ -166,6 +166,10 @@ dt:first-child::before {
 .snow {
     background-image: url("/weather/images/snow.jpg");
 }
+
+.hide{
+    display: none;
+  }
 
 /**************************
 *  3. Mobile Rules 

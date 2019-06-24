@@ -2,8 +2,8 @@
 <html lang="en-us">
  <head>
   <meta charset="UTF-8">
-  <title id="page-title">Franklin, ID | Weather Site</title>
-  <meta name="description" content="Weather forecast for Franklin, Idaho">
+  <title id="page-title">Greenville, SC | Weather Site</title>
+  <meta name="description" content="Weather forecast for Greenville, SC">
   <meta name="viewport" content="width=device-width">
   <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen">
  </head>
@@ -17,23 +17,31 @@
                <ul>
                   <li><a href="../index.html" title="Go to the Weather Site home page">Current</a></li>
                   <li><a href="#" title="">Search</a></li>
-                  <li><a href="#" title="">Franklin</a></li>
-                  <li><a href="../weather/greenville.html" title="Go to Greenville, SC Weather site">Greenville</a></li>
+                  <li><a href="../weather/franklin-weather.html" title="Go to Franklin, Idaho weather site">Franklin</a></li>
+                  <li><a href="#" title="">Greenville</a></li>
                </ul>
          </nav>
      </header>
-     <main id="main-content">
+
+     <section id="status">Please be patient while I get your weather information.</section>
+
+     <main id="main-content" class="hide">
         <section id="locationInfo">
-           <h1 id="locationh1">Franklin, Idaho</h1>
-           <p><span>Zip: </span>83237 | <span>Elevation: </span>1514.246 | <span>Location: </span>42.07 N, 111.79 W</p>
+           <h1 id="locationh1">Greenville, SC</h1>
+           <dl>
+              <dt>Zip: </dt><dd id="zip"></dd>
+              <dt>Elevation: </dt><dd id="elevation"></dd>
+              <dt>Location: </dt><dd id="location"><span id="longitude"></span><span id="latitude"></span></dd>
+           </dl>
+           <!-- <p><span>Zip: </span>83237 | <span>Elevation: </span>1514.246 | <span>Location: </span>42.07 N, 111.79 W</p> -->
         </section>
             <div id="currentWeather">
                <section id="temps">
                   <h2>Temperature</h2>
-                  <p id="tempCurrent">40°F</p>
+                  <p id="tempCurrent"></p>
                   <p>
-                     <span id="tempHigh">64°F</span>
-                     <span id="tempLow">41°F</span>
+                     <span id="tempHigh"></span>
+                     <span id="tempLow"></span>
                   </p>
                   <p id="feels">Feels Like <span id="feelTemp">??</span>°F</p>
                </section>
@@ -90,10 +98,11 @@
          <ul>
             <li><a href="../index.html" title="Go to the Weather Site home page">Current</a></li>
             <li><a href="#" title="">Search</a></li>
-            <li><a href="#" title="">Franklin</a></li>
-            <li><a href="../weather/greenville.html" title="Go to Greenville, SC Weather site">Greenville</a></li>
+            <li><a href="../weather/franklin-weather.html" title="Go to Franklin, Idaho weather site">Franklin</a></li>
+            <li><a href="#" title="">Greenville</a></li>
          </ul>
       </nav>
       <script src="js/functions.js"></script>
+      <script src="js/localdata.js"></script>
  </body>
 </html>
