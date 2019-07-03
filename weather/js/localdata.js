@@ -2,17 +2,28 @@
 let weatherURL = "https://justinlilly.github.io/weather/js/weather.json";
 
 // Call fetch function
-fetchData(weatherURL);
+// fetchData(weatherURL);
 
 // Variables
-let pageNav = document.getElementsByClassName('page-nav');
+let pageNav = document.getElementById('largeScreenNav');
 let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('main-content');
 
+pageNav.addEventListener('click', function(evt){
+
+// Get city name
+let cityName = evt.target.innerHTML;
+switch (cityName) {
+  case "Franklin":
+  case "Greenville":
+  case "Springfield":
+    evt.preventDefault();
+  break;
+}
 
 
-function fetchData(weatherURL){
-  let cityName = 'Greenville'; // The data we want from the weather.json file
+// function fetchData(weatherURL){
+  // let cityName = 'Greenville'; // The data we want from the weather.json file
   fetch(weatherURL) 
   .then(function(response) {
   if(response.ok){
@@ -124,4 +135,5 @@ function fetchData(weatherURL){
   console.log('There was a fetch problem: ', error.message);
   statusContainer.innerHTML = 'Sorry, the data could not be processed.';
   })
-}
+// }
+});

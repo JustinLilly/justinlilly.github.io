@@ -223,7 +223,9 @@ dt {
 ***************************/
 @media only screen and (min-width: 823px) {
     
-    #mobileNav { display: none; }
+    #page-Nav {
+        
+    }
     #currentWeather {
         display: flex;
         flex-direction: row;
