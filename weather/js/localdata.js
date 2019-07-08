@@ -5,7 +5,7 @@ let weatherURL = "https://justinlilly.github.io/weather/js/weather.json";
 // fetchData(weatherURL);
 
 // Variables
-let pageNav = document.getElementById('largeScreenNav');
+let pageNav = document.getElementById('page-nav');
 let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('main-content');
 

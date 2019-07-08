@@ -28,13 +28,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Navigation */
-nav {
+#page-nav {
     background-color: #0e89d5;
+    
+    bottom: 0;
+    width: 100%;
+    z-index: 1;  
 }
 nav ul{
     color: white;
     list-style-type: none;
-    margin: 10px 0 0 0;
+    margin: 0;
     display: flex;
     justify-content: space-evenly;
     font-size: 20px;
@@ -42,7 +46,7 @@ nav ul{
 }
 nav li {
     display: inline-block;
-    padding: 25px 0px 25px 0px;
+    padding: 15px 0px 15px 0px;
 }
 nav a {
     text-decoration: none;
@@ -96,7 +100,6 @@ main section {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../images/rain.jpg");
 }
 
 #summary div {
@@ -161,19 +164,19 @@ dt {
 /* Background pictures for Summary */
 /* Should be small pictures first*/
 .clear {
-    background-image: url("/weather/images/clear.jpg");
+    background-image: url("../images/clear.jpg");
 }
 .fog {
-    background-image: url("/weather/images/fog.jpg");
+    background-image: url("../images/fog.jpg");
 }
 .rain {
     background-image: url("../images/rain.jpg");
 }
 .cloudy {
-    background-image: url("/weather/images/clouds.jpg");
+    background-image: url("../images/clouds.jpg");
 }
 .snow {
-    background-image: url("/weather/images/snow.jpg");
+    background-image: url("../images/snow.jpg");
 }
 
 .hide{
@@ -184,6 +187,10 @@ dt {
 *  3. Mobile Rules 
 ***************************/
 @media only screen and (max-width: 823px) {
+
+    #page-nav {
+        position: fixed;
+    }
 
     #page-header img {
         height: 50px;
@@ -198,7 +205,38 @@ dt {
         text-align: left;
         margin-left: 5px;
     }
-    #largeScreenNav { display: none; }
+}
+
+/**************************
+* 4. Large Screen Rules 
+***************************/
+@media only screen and (min-width: 823px) {
+    
+    #page-Nav {
+        position: relative;
+
+    }
+    nav ul{
+        font-size: 32px;
+    }
+    nav li {
+        padding: 25px 0px 25px 0px;
+    }
+    #currentWeather {
+        display: flex;
+        flex-direction: row;
+        padding: 20px 0 20px 0;
+    }
+    #currentWeather section {
+        width: 33%;
+        padding: 50px 0 50px 0;
+    }
+    #page-header {
+        height: 134px;
+    }
+    #page-header h1 {
+        font-size: 48px;
+    }
 
     /* Background pictures for Summary - Large */
     /* .clear {
@@ -216,33 +254,4 @@ dt {
     .snow {
         background-image: url("/weather/images/snow.jpg");
     } */
-}
-
-/**************************
-* 4. Large Screen Rules 
-***************************/
-@media only screen and (min-width: 823px) {
-    
-    #page-Nav {
-        
-    }
-    #currentWeather {
-        display: flex;
-        flex-direction: row;
-        padding: 20px 0 20px 0;
-    }
-    #currentWeather section {
-        width: 33%;
-        padding: 50px 0 50px 0;
-    }
-    #page-header {
-        height: 134px;
-    }
-    #page-header h1 {
-        font-size: 48px;
-    }
-    nav ul{
-        font-size: 32px;
-        margin: 0px;
-    }
 }

@@ -3,10 +3,19 @@
  <head>
   <meta charset="UTF-8">
   <title id="page-title"> | Weather Site</title>
-  <meta name="description" content="Weather forecast for Greenville, SC">
+  <meta name="description" content="Weather forecast for Current Location">
   <meta name="viewport" content="width=device-width">
   <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen">
  </head>
+
+ <!-------------------------
+ - List of Collaborators -
+ 1. Justin Lilly
+ 2. Daniel Eckton
+ 3. Vova Zhdanov
+ 4. Ashley Ray
+ ---------------------------->
+
  <body>
      <header>
         <section id="page-header">
@@ -30,9 +39,9 @@
         <section id="locationInfo">
            <h1 id="contentHeading"></h1>
            <dl>
-              <dt>Zip: </dt><dd id="zip"></dd>
+              <dt>Zip: </dt><dd id="zip">missing | </dd>
               <dt>Elevation: </dt><dd id="elevation"></dd>
-              <dt>Location: </dt><dd id="location"><span id="longitude"></span><span id="latitude"></span></dd>
+              <dt>Location: </dt><dd id="location"><span id="longitude"></span>, <span id="latitude"></span></dd>
            </dl>
         </section>
             <div id="currentWeather">
@@ -43,7 +52,7 @@
                      <span id="tempHigh"></span>
                      <span id="tempLow"></span>
                   </p>
-                  <p id="feels">Feels Like <span id="feelTemp">??</span>°F</p>
+                  <p id="feels">Feels Like <span id="feelTemp">??</span></p>
                </section>
                <section id="wind">
                   <h2>Wind</h2>
@@ -57,7 +66,7 @@
                
                <section id="summary">
                      <h2 id="summaryCondition">Rain</h2>
-                     <div id="weatherView" class="rain"></div>
+                     <div id="weatherView"></div>
                </section>
                </div>
            <section id="hourly">
@@ -70,6 +79,6 @@
         &copy;2019 - The Weather Site
      </footer>
       <script src="js/functions.js"></script>
-      <script src="js/localdata.js"></script>
+      <script src="js/geo_loc.js"></script>
  </body>
 </html>
