@@ -1,33 +1,12 @@
-/* html{
-    box-sizing: border-box;
-}
-html *{
-    box-sizing: border-box;
-}
-ul{
-    width: 40%;
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-li{
-    width: 40%;
-    flex: 0 1 50%;
-    border: solid 2px black;
-    text-align: center;
-} */
-
 html {
     background-image: url("../images/site/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 body {
-    
     display: flex;
     justify-content: center;
+    font-family: roboto;
 }
 main {
     background-color: white;
@@ -36,6 +15,27 @@ main {
 }
 .hidden {
     display: none;
+}
+#page-nav {
+    background-color: #de2226;
+}
+#nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+#nav-list li{
+    color: white;
+    font-size: 20px;
+    padding: 20px 10px 20px 10px;
+}
+#nav-list li a{
+    text-decoration: none;
+    color: white;
+}
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 42px;
 }
 footer {
     border-top: 4px black solid;

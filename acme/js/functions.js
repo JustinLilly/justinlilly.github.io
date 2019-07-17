@@ -11,7 +11,6 @@ let acmeURL = "https://justinlilly.github.io/acme/js/acme.json";
 
 
 // Build and Display Navigation Bar
-
 fetch(acmeURL)
   .then(function(response){
       if(response.ok){
@@ -21,12 +20,12 @@ fetch(acmeURL)
   })
   .then(function(data){
       console.log(data);
-      console.log(Object.keys(data).length);
-
+      let keys = Object.keys(data);
+      console.log(keys);
       let navLink = '';
 
-      for (let i = 0; i < data.navigation.length; i++){
-        navLink += '<li><a href="#">' + 'data.navigation[i]' + '</a></li>';
+      for (let i = 0; i < keys.length; i++){
+        navLink += '<li><a href="#">' + keys[i] + '</a></li>';
       }
       console.log(navLink);
       document.getElementById('nav-list').innerHTML = navLink;
