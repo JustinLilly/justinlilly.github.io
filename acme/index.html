@@ -1,18 +1,92 @@
 <!doctype html>
-
-<html lang="en">
+<html lang="en_us">
 <head>
   <meta charset="utf-8">
-
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-
+  <title></title>
+  <meta name="description" content="Acme">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Justin Lilly">
+  <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen">
 </head>
-
 <body>
-  <script src="js/scripts.js"></script>
+    <main id="main-content">
+        <header>
+            <section>
+                <img src="images/site/logo.png" alt="logo">
+            </section>
+            <nav id="page-nav">
+                <noscript>JavaScript must be enabled to use the site.</noscript>
+                <ul id="nav-list"></ul>
+            </nav>
+        </header>
+            <section id="home-page">
+                <h1 id="home-title">Welcome to Acme!</h1>
+                <section id="featured-item">
+                  <img src="images/site/feature.jpg" alt="acme rocket">
+                  <div id="featured-desc">
+                  <ul>
+                    <li><h2>Acme Rocket</h2></li>
+                    <li>Quick lighting fuse</li>
+                    <li>NHTSA approved seat belts</li>
+                    <li>Mobile launch stand included</li>
+                    <li><a href="#"><img id="actionbtn" alt="Add to cart button" src="images/site/iwantit.gif"></a></li>
+                  </ul></div>
+                </section>
+                <section id="featured-item-reviews">
+                  <ul>
+                    <li>"I don't know how I ever caught roadrunners before this." (9/10)</li>
+                    <li>"That thing was fast!" (4/5)</li>
+                    <li>"Talk about fast delivery." (5/5)</li>
+                    <li>"I didn't even have to pull the meat apart." (4.5/5)</li>
+                    <li>"I'm on my thirtieth one. I love these things!" (5/5)</li>
+                  </ul>
+                </section>
+                <section id="featured-recipes">
+                  <ul>
+                    <li>
+                        <a href="#">
+                          <figure>
+                            <img src="images/recipes/bbqsand.jpg" alt="bbq">
+                            <figcaption>Pulled Roadrunner BBQ</figcaption>
+                          </figure>
+                        </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <figure>
+                          <img src="images/recipes/potpie.jpg" alt="pot pie">
+                          <figcaption>Roadrunner Pot Pie</figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <figure>
+                          <img src="images/recipes/soup.jpg" alt="soup">
+                          <figcaption>Roadrunner Soup</figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          <figure>
+                            <img src="images/recipes/taco.jpg" alt="tacos">
+                            <figcaption>Roadrunner Tacos</figcaption>
+                          </figure>
+                        </a>
+                    </li>
+                  </ul>
+                </section>
+            </section>
+            <section id="content-page" class="hidden">
+                <h1 id="content-title">Content Title Here</h1>
+
+            </section>
+        <footer>
+            <p>&copy; 2018 ACME, All rights reserved.</p>
+            <p>All images used are believed to be in "Fair Use". Please notify the author if any are not and they will be removed.</p>
+        </footer>
+    </main>
+    <script src="js/functions.js"></script>
 </body>
 </html>

@@ -1,3 +1,19 @@
+/*
+1. Imports
+2. General Rules
+3. Mobile Rules
+4. Large Screen Rules
+*/
+
+/**************************
+* 1. Imports 
+***************************/
+/* @import url('normalize.css'); */
+
+/**************************
+* 2. General Rules 
+***************************/
+
 html {
     background-image: url("../images/site/background.jpg");
     background-repeat: no-repeat;
@@ -8,14 +24,25 @@ body {
     justify-content: center;
     font-family: roboto;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+li {
+    text-decoration: none;
+}
 main {
     background-color: white;
     width: 95%;
     padding: 10px;
+    /* z-index: -1; */
 }
 .hidden {
     display: none;
 }
+
+/************* 
+* Navigation
+**************/
 #page-nav {
     background-color: #de2226;
 }
@@ -26,18 +53,68 @@ main {
 }
 #nav-list li{
     color: white;
-    font-size: 20px;
-    padding: 20px 10px 20px 10px;
+    padding: 10px;
 }
 #nav-list li a{
-    text-decoration: none;
     color: white;
 }
-h1 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 42px;
+
+/*********** 
+* Home Page 
+************/
+/* Featured Item */
+#featured-item {
+    /* background-image: url("../images/site/feature.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    display: flex;
+    flex-wrap: wrap;
 }
+#featured-item img {
+    z-index: 1;
+}
+#featured-desc {
+    width: 50%;
+    max-width: 306px;
+    height: 100%;
+    max-height: 908px;
+    position: absolute;
+    right: 0;
+}
+#featured-item ul {
+    list-style-type: none;
+    color: #d32226;
+    z-index: 2;
+    background-color: rgba(0, 255, 255, .5);
+    /* position: absolute; */
+    /* top: 0; */
+    /* right: 0; */
+    
+}
+#featured-item li{
+    line-height: 1.6;
+}
+
 footer {
     border-top: 4px black solid;
     text-align: center;
+}
+
+/**************************
+*  3. Mobile Rules 
+***************************/
+@media only screen and (max-width: 823px) {}
+
+/**************************
+* 4. Large Screen Rules 
+***************************/
+@media only screen and (min-width: 823px) {
+
+    h1 {
+        font-size: 42px;
+    }
+    #page-nav li {
+        font-size: 20px;
+        padding: 20px 10px 20px 10px;
+    }
 }

@@ -33,3 +33,6 @@ fetch(acmeURL)
   .catch(function(error){
     console.log('There was a fetch problem: ', error.message);
 })
+
+// Page Title
+title.insertBefore(document.createTextNode("Home"), title.childNodes[0]);
