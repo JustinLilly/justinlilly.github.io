@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en_us">
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title id="page-title">ACME</title>
   <meta name="description" content="Acme">
   <meta name="viewport" content="width=device-width">
   <meta name="author" content="Justin Lilly">
@@ -33,6 +33,7 @@
                   </ul></div>
                 </section>
                 <section id="featured-item-reviews">
+                  <h2>Acme Rocket Reviews</h2>
                   <ul>
                     <li>"I don't know how I ever caught roadrunners before this." (9/10)</li>
                     <li>"That thing was fast!" (4/5)</li>
@@ -42,45 +43,48 @@
                   </ul>
                 </section>
                 <section id="featured-recipes">
+                  <h2>Featured Reviews</h2>
                   <ul>
                     <li>
-                        <a href="#">
-                          <figure>
-                            <img src="images/recipes/bbqsand.jpg" alt="bbq">
-                            <figcaption>Pulled Roadrunner BBQ</figcaption>
-                          </figure>
-                        </a>
-                    </li>
-                    <li>
-                      <a href="#">
                         <figure>
-                          <img src="images/recipes/potpie.jpg" alt="pot pie">
-                          <figcaption>Roadrunner Pot Pie</figcaption>
+                          <a href="#"><img src="images/recipes/bbqsand.jpg" alt="bbq"></a>
+                          <figcaption><a href="#">Pulled Roadrunner BBQ</a></figcaption>
                         </figure>
-                      </a>
                     </li>
                     <li>
-                      <a href="#">
                         <figure>
-                          <img src="images/recipes/soup.jpg" alt="soup">
-                          <figcaption>Roadrunner Soup</figcaption>
+                          <a href="#"><img src="images/recipes/potpie.jpg" alt="pot pie"></a>
+                          <figcaption><a href="#">Roadrunner Pot Pie</a></figcaption>
                         </figure>
-                      </a>
                     </li>
                     <li>
-                        <a href="#">
-                          <figure>
-                            <img src="images/recipes/taco.jpg" alt="tacos">
-                            <figcaption>Roadrunner Tacos</figcaption>
-                          </figure>
-                        </a>
+                        <figure>
+                          <a href="#"><img src="images/recipes/soup.jpg" alt="soup"></a>
+                          <figcaption><a href="#">Roadrunner Soup</a></figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                          <a href="#"><img src="images/recipes/taco.jpg" alt="tacos"></a>
+                          <figcaption><a href="#">Roadrunner Tacos</a></figcaption>
+                        </figure>
                     </li>
                   </ul>
                 </section>
             </section>
             <section id="content-page" class="hidden">
-                <h1 id="content-title">Content Title Here</h1>
-
+                <h1 id="product-name">Content Title Here</h1>
+                <div>
+                  <img src="images/products/anvil.png" alt="product image" id="path">
+                </div>
+                <div>
+                  <p id="product-description"></p>
+                  <ul>
+                    <li id="product-manufacturer"></li>
+                    <li id="product-rating"></li>
+                  </ul>
+                  <p id="product-price"></p>
+                </div>
             </section>
         <footer>
             <p>&copy; 2018 ACME, All rights reserved.</p>
